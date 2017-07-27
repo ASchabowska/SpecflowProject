@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
 
 namespace CoupleFramework.Pages
 {
@@ -26,19 +27,16 @@ namespace CoupleFramework.Pages
             return new HomePageCommand(authors_name);
         }
 
-        public static bool IsTextPresent(string warning)
-        {
-            var exc = Driver.Instance.FindElement(By.PartialLinkText(warning));
-            if (exc != null)
-            {
-                return true;
-            }
-            else return false;
-        }
+
 
         public static void Java()
         {
             Driver.Instance.FindElement(By.XPath("//img[@alt='Java']")).Click();
+        }
+
+        public static void SelectContact()
+        {
+            Driver.Instance.FindElement(By.LinkText("Kontakt")).Click();
         }
     }
 

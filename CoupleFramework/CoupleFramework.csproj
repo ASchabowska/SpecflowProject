@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Pages\AuthorsPage.cs" />
     <Compile Include="Driver.cs" />
+    <Compile Include="Pages\ContactPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\SearchPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

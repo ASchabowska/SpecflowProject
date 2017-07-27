@@ -37,14 +37,16 @@ namespace Tests
             Assert.AreEqual(SearchPage.Title(), "Wyniki wyszukiwania dla: java");
         }
 
-      /* [TestMethod]
-        public void Subscribe_without_email()
+       [TestMethod]
+        public void Sending_Messages_Without_All_Data()
         {
-            //klikamy na subskrybuj
-            HomePage.Subscribe();
-            //sprawdzamy czy wyskoczyl bład
-            Assert.IsTrue(HomePage.IsTextPresent("Wypełnij to pole."));
-        }*/
+            //wchodzimy w kontakt
+            HomePage.SelectContact();
+            //uzupelniamy dane
+            ContactPage.CreateMessage("name","topic","body").Send();
+            //sprawdzamy
+            Assert.IsTrue(ContactPage.Error());
+        }
 
         [TestMethod]
         public void Can_We_Search_Java()

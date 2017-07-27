@@ -29,13 +29,34 @@ namespace UnitTestProject2
         [When(@"I search java")]
         public void WhenISearchJava()
         {
-            AuthorsPage.Search("Java");
+            AuthorsPage.Search("java");
         }
         
         [Then(@"the result be on screen")]
         public void ThenTheResultBeOnScreen()
         {
             Assert.AreEqual(SearchPage.Title(), "Wyniki wyszukiwania dla: java");
+            Driver.Close();
         }
+
+        [Given(@"I go to contact page")]
+        public void GivenIGoToContactPage()
+        {
+            HomePage.SelectContact();
+        }
+
+        [When(@"I create and send incomplete message")]
+        public void WhenICreateAndSendIncompleteMessage()
+        {
+            ContactPage.CreateMessage("name", "topic", "body").Send();
+        }
+
+        [Then(@"it should be error on contact page")]
+        public void ThenItShouldBeErrorOnContactPage()
+        {
+            Assert.IsTrue(ContactPage.Error());
+            Driver.Close();
+        }
+
     }
 }
