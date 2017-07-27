@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoupleFramework", "CoupleFr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{56B22F34-CFC8-4CC6-9A1C-3989981DA186}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject2", "UnitTestProject2\UnitTestProject2.csproj", "{B56C012A-AD35-40A4-8E73-D8214A651884}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specflow Tests", "UnitTestProject2\Specflow Tests.csproj", "{B56C012A-AD35-40A4-8E73-D8214A651884}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
